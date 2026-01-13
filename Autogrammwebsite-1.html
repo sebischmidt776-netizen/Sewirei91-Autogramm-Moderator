@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Sewirei91 – Streamer Seite</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+    margin: 0;
+  }
+  header {
+    background: #020617;
+    padding: 20px;
+    text-align: center;
+  }
+  button {
+    background: #38bdf8;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  button:hover {
+    background: #0ea5e9;
+  }
+  .container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #020617;
+    padding: 30px;
+    border-radius: 12px;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: none;
+  }
+  .page {
+    display: none;
+  }
+</style>
+
+<script>
+  function showPage(pageId) {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("autogramm").style.display = "none";
+    document.getElementById("moderator").style.display = "none";
+    document.getElementById(pageId).style.display = "block";
+  }
+</script>
+</head>
+
+<body>
+
+<header>
+  <h1>Sewirei91</h1>
+  <button onclick="showPage('home')">Home</button>
+  <button onclick="showPage('autogramm')">Autogrammkarte</button>
+  <button onclick="showPage('moderator')">Moderator Bewerbung</button>
+</header>
+
+<div class="container">
+
+<!-- HOME -->
+<div id="home" class="page" style="display:block;">
+  <h2>Willkommen 👋</h2>
+  <p>Wähle oben aus:</p>
+  <ul>
+    <li>📬 Autogrammkarte anfordern</li>
+    <li>🛡️ Als Stream-Moderator bewerben</li>
+  </ul>
+</div>
+
+<!-- AUTOGRAMM -->
+<div id="autogramm" class="page">
+  <h2>Autogrammkarte</h2>
+
+  <form action="mailto:sebischmidt776@gmail.com" method="post" enctype="text/plain">
+    <label>Vorname</label>
+    <input type="text" name="Vorname" required>
+
+    <label>Nachname</label>
+    <input type="text" name="Nachname" required>
+
+    <label>Adresse</label>
+    <textarea name="Adresse" required></textarea>
+
+    <button type="submit">Absenden</button>
+  </form>
+</div>
+
+<!-- MODERATOR -->
+<div id="moderator" class="page">
+  <h2>Moderator Bewerbung</h2>
+
+  <form action="mailto:sebischmidt776@gmail.com" method="post" enctype="text/plain">
+    <label>Vorname</label>
+    <input type="text" name="Vorname" required>
+
+    <label>Nachname</label>
+    <input type="text" name="Nachname" required>
+
+    <label>Warum willst du Moderator sein?</label>
+    <textarea name="Grund" rows="6" required></textarea>
+
+    <button type="submit">Bewerbung absenden</button>
+  </form>
+</div>
+
+</div>
+
+</body>
+</html>
